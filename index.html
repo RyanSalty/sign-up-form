@@ -6,59 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up Form</title>
     <link rel="stylesheet" href="styles.css" defer>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     
     <div class="form-widget">
         <div class="img-container">
             <img src="./imgs/bg_pic.avif" alt="Picture of leaves">
+            <div class="logo-container">
+                <img src="./imgs/odin-lined.png" alt="Odin Project Logo">
+                <h1>ODIN</h1>
+            </div>
+            <p>Photo by <a href="https://unsplash.com/photos/25xggax4bSA">Halie West</a> on <a href="https://unsplash.com">Unsplash</a></p>
         </div>
         <div class = "form-container">
             <div class="cta-container">
                 <p class="cta">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
                 <p class="cta">You <em>know</em> you want to.</p>
             </div>
-            <form action="/my-sign-up-form" method="post">
+            <form id="sign-up-form" action="/my-sign-up-form" method="post">
                 <legend>Let's do this!</legend>
 
                 <div class="form-row">
                     <div class="form-item">
-                        <label for="first_name">FIRST NAME:</label>
-                        <input type="text" id="first_name" name="first_name" />
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" name="first_name" required/>
                     </div>
                     <div class="form-item">
-                        <label for="last_name">LAST NAME:</label>
-                        <input type="text" id="last_name" name="last_name" />
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" name="last_name" required/>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-item">
-                        <label for="email">EMAIL:</label>
-                        <input type="email" id="email" name="email" />
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" placeholder="thor@odingproject.com" required/>
                     </div>
                     <div class="form-item">
-                        <label for="phone">PHONE NUMBER:</label>
-                        <input type="tel" id="phone" name="phone" />
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="tel" id="phone" name="phone" placeholder="888-888-8888" required pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"/>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-item">
-                        <label for="password">PASSWORD:</label>
-                        <input type="password" id="password" name="password" />
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" minlength="6" maxlength="12" required onchange="onChange()"/>
                     </div>
                     <div class="form-item">
-                        <label for="password">CONFIRM PASSWORD:</label>
-                        <input type="password" id="password" name="password" />
+                        <label for="confirm">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm" name="confirm" minlength="6" maxlength="12" required onchange="onChange()"/>
                     </div>
+
+                <p class="password-validation"></p>
                 </div>
                 
             </form>
 
-            <button type="submit"> Create Account</button>
+            <button id="submit-button" type="submit" form="sign-up-form"> Create Account</button>
 
-            <p>Already have an account? <a href="/login">Log in.</a></p>
+            <p>Already have an account? <a href="/login">Log in</a></p>
         </div>
     </div>
 
