@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="styles.css" defer>
+</head>
+<body>
+    
+    <div class="form-widget">
+        <div class="img-container">
+            <img src="./imgs/bg_pic.avif" alt="Picture of leaves">
+        </div>
+        <div class = "form-container">
+            <div class="cta-container">
+                <p class="cta">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+                <p class="cta">You <em>know</em> you want to.</p>
+            </div>
+            <form action="/my-sign-up-form" method="post">
+                <legend>Let's do this!</legend>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="first_name">FIRST NAME:</label>
+                        <input type="text" id="first_name" name="first_name" />
+                    </div>
+                    <div class="form-item">
+                        <label for="last_name">LAST NAME:</label>
+                        <input type="text" id="last_name" name="last_name" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="email">EMAIL:</label>
+                        <input type="email" id="email" name="email" />
+                    </div>
+                    <div class="form-item">
+                        <label for="phone">PHONE NUMBER:</label>
+                        <input type="tel" id="phone" name="phone" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="password">PASSWORD:</label>
+                        <input type="password" id="password" name="password" />
+                    </div>
+                    <div class="form-item">
+                        <label for="password">CONFIRM PASSWORD:</label>
+                        <input type="password" id="password" name="password" />
+                    </div>
+                </div>
+                
+            </form>
+
+            <button type="submit"> Create Account</button>
+
+            <p>Already have an account? <a href="/login">Log in.</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
